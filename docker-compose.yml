@@ -1,0 +1,41 @@
+version: '3'
+services:
+  clickbotbot:
+    build: ./build/
+    environment:
+      - PHONE=${PHONE}
+      - API_HASH=${API_HASH}
+      - API_ID=${API_ID}
+      - MYSQL_PW=${MYSQL_ROOTPW}
+      - MYSQL_USER=${MYSQL_USER}
+      - BOT=${BOT}
+      - WITHDRAW_ADDRESS=${WITHDRAW_ADDRESS}
+      - TERM=xterm
+    volumes:
+      - '${DATA_STORAGE}/sessions/:/usr/src/app/session/'
+    restart: 'no'
+    depends_on:
+      - db
+
+  clickbotlogin:
+    build:
+      context: ./build/
+      dockerfile: Dockerfile-login
+    environment:
+      - PHONE=${PHONE}
+      - API_HASH=${API_HASH}
+      - API_ID=${API_ID}
+      - TERM=xterm
+    volumes:
+      - '${DATA_STORAGE}/sessions/:/usr/src/app/session/'
+    restart: 'no'
+
+  db:
+    image: ${DB_IMAGE}
+    volumes:
+      - '${DATA_STORAGE}mysql/data/:/var/lib/mysql'
+      - './mysql/import/:/docker-entrypoint-initdb.d/'
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOTPW}
+        TZ: Europe/Berlin
+    restart: always

@@ -1,0 +1,3 @@
+# clickbot
+16,46 * * * * /path/to/clickbotbot/update.sh &> /dev/null
+17 17 * * * /path/to/clickbotbot/withdraw.sh &> /dev/null

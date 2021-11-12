@@ -1,0 +1,8 @@
+asyncio
+colorama
+telethon
+requests
+bs4
+mysql-connector-python
+cloudscraper
+fake_useragent
