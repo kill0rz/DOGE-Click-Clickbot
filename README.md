@@ -50,6 +50,10 @@ You should not run this manually. Instead use the crontab provided in crontab fi
 
 You could referal yourself with multiple accounts.
 
+# Current problems
+
+This bot does *not* pass Cloudflare IAUA-mode. Cloudflare does it's job.
+
 # Is this legal?
 
 Is does violate the terms of Telegram and DOGE click. Do not use!
