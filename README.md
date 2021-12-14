@@ -63,3 +63,9 @@ This project and the developer are not in touch with DOGE Click or Telegram by a
 # Donate
 
 If you earn a lot of money and appreciate my work, consider [a donation](https://blog.kill0rz.com/spenden/). Thanks!
+
+# Images
+
+![docker-compose logs](https://raw.githubusercontent.com/kill0rz/DOGE-Click-Clickbot/master/img/cmd_run.jpg "docker-compose logs")
+
+![wallet](https://raw.githubusercontent.com/kill0rz/DOGE-Click-Clickbot/master/img/withdraw.jpg "wallet")
